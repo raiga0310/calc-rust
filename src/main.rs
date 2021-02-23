@@ -1,7 +1,8 @@
-fn plus(arg1: u32, arg2: u32) -> u32 {
+fn plus<T: std::ops::Add<Output = T> + Copy>(arg1: T, arg2: T) -> T {
 	arg1 + arg2
 }
 
 fn main() {
-	println!("Hello, plus!! 5 + 3 is {}", plus(3, 5);
+	println!("Hello, plus!! 0.55 + 0.73 is {}", plus(0.55, 0.73));
+	println!("And 5 + 7 is {}", plus(5, 7));
 }
